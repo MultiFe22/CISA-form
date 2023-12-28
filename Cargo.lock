@@ -3,14 +3,6 @@
 version = 3
 
 [[package]]
-name = "CISA"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "lopdf",
-]
-
-[[package]]
 name = "adler"
 version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -74,6 +66,14 @@ dependencies = [
  "iana-time-zone",
  "num-traits",
  "windows-targets",
+]
+
+[[package]]
+name = "cisa"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "lopdf",
 ]
 
 [[package]]
