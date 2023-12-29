@@ -11,7 +11,6 @@ pub struct Settings {
     pub database: DatabaseSettings,
 }
 
-
 #[derive(Clone, serde::Deserialize)]
 pub struct AplicationSettings {
     #[serde(deserialize_with = "deserialize_number_from_string")]

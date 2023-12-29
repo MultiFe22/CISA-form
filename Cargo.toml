@@ -27,7 +27,6 @@ quickcheck = "0.9.2"
 quickcheck_macros = "0.9.1"
 tokio = { version = "1", features = ["rt", "macros"] }
 wiremock = "0.5"
-serde_json = "1"
 linkify = "0.9"
 
 [dependencies]
@@ -35,6 +34,7 @@ actix-web = "4"
 anyhow = "1"
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 serde = { version = "1", features = ["derive"]}
+serde_json = "1"
 config = "0.13"
 dotenv = "0.15.0"
 uuid = { version = "1", features = ["v4"] }
