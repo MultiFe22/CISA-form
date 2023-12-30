@@ -1,4 +1,4 @@
-#[derive(Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub enum PartialFormSection {
     Section1 = 1,
     Section2 = 2,
@@ -16,6 +16,10 @@ impl PartialFormSection {
             3 => Ok(PartialFormSection::Section3),
             _ => Err(format!("'{}' is not a valid form section.", value)),
         }
+    }
+
+    pub fn to_int(&self) -> i32 {
+        *self as i32
     }
 }
 

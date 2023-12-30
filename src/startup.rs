@@ -2,6 +2,7 @@ use crate::configuration::DatabaseSettings;
 use crate::configuration::Settings;
 // use crate::routes::{confirm, health_check, publish_newsletter, subscribe};
 use crate::routes::health_check;
+use crate::routes::partial_form;
 use actix_web::dev::Server;
 use actix_web::{web, App, HttpServer};
 use sqlx::postgres::PgPoolOptions;
@@ -22,7 +23,7 @@ pub fn run(
         App::new()
             .wrap(TracingLogger::default())
             .route("/health_check", web::get().to(health_check))
-            // .route("/subscriptions", web::post().to(subscribe))
+            .route("/partial_forms", web::post().to(partial_form))
             // .route("/subscriptions/confirm", web::get().to(confirm))
             // .route("/newsletters", web::post().to(publish_newsletter))
             .app_data(db_pool.clone())

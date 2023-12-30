@@ -53,7 +53,7 @@ pub enum PartialFormField {
     ThirdSchema(ThirdSchema),
 }
 
-fn parse_json(input: &str) -> Result<PartialFormField> {
+pub fn parse_json(input: &str) -> Result<PartialFormField> {
     serde_json::from_str(input)
 }
 
