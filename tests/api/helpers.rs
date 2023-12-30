@@ -29,7 +29,6 @@ pub struct TestApp {
     pub db_pool: PgPool,
 }
 
-
 impl TestApp {
     pub async fn post_partial_form(&self, body: String) -> reqwest::Response {
         let client = reqwest::Client::new();
